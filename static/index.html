@@ -3,13 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <title>Форма выбора питомца</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
 <main>
     <h1>Найди себе друга!</h1>
 
-    <!--Форму размещай тут-->
+    <form action="/pets/orders" method="POST" id="form">
+        <label>
+            Тип животного
+            <select name="petType">
+                <option value="cat">Кот</option>
+                <option value="dog">Собак</option>
+                <option value="granta">Лада Гранта</option>
+                <option value="granta">Лада Веста</option>
+            </select>
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="gender" value="boy"> Универсал
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="gender" value="girl"> Седан
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="gender" value="none"> Хэтчбек
+        </label>
+        <br>
+        <label>
+            Цвет кузова
+            <input type="color" name="eyeColor">
+        </label>
+        <br>
+        <label>
+            Радиус колес
+            <input type="number" name="tailLength" value="20">
+        </label>
+        <br>
+        <label>
+            Имя
+            <input type="text" name="name" placeholder="Ваше имя">
+        </label>
+        <br>
+        <label>
+            Дата рождения
+            <input type="date" name="dateOfBirth">
+        </label>
+        <br>
+        <label>
+            Email
+            <input type="email" name="email" placeholder="Ваш Email">
+        </label>
+        <br>
+        <label>
+            Номер телефона
+            <input type="tel" name="phone">
+        </label>
+        <br>
+        <br>
+        <input type="submit" name="submit" value="Отправить">
+        <input type="reset" name="reset" value="Миша, все X давай по новой">
+    </form>
 
 </main>
 </body>
